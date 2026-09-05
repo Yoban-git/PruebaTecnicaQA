@@ -1,11 +1,16 @@
 name: E2E Tests
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - '**'
+  pull_request:
+    branches:
+      - '**'
 
 jobs:
   e2e:
-    runs-on: [self-hosted]
+    runs-on: ubuntu-latest
 
     steps:
       - name: Clonar repositorio
