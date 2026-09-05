@@ -2,7 +2,7 @@
 Feature: Busqueda valida
 
 Scenario: videojeugos
- Given El usuario se encuentra en el Home de la pagina
+  Given El usuario se encuentra en el Home de la pagina
   When El usuario busca "playstation 5"
   And El usuario aplica un filtro de color "Blanco"
   And El usuario ordena los resultados de "Menor precio"
