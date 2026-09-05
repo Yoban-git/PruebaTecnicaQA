@@ -1,0 +1,26 @@
+{
+  "name": "testqa",
+  "version": "1.0.0",
+  "description": "Flujo_automatizado_E2E",
+  "license": "(ISC)",
+  "author": "Yoan Cabrera",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "codeceptjs run --steps --verbose",
+    "test:headed": "cross-env HEADED=true codeceptjs run --steps",
+    "test:debug-network": "cross-env HEADED=true DEBUG_NETWORK=true codeceptjs run --steps",
+    "features:Search": "codeceptjs run --features --grep \"@Search\" --steps --verbose",
+    "allure:generate": "allure generate ./output/allure-results -o ./allure-report --clean",
+    "allure:report": "allure open ./allure-report"
+  },
+  "devDependencies": {
+    "@codeceptjs/allure-legacy": "^1.0.2",
+    "@codeceptjs/helper": "^2.0.0",
+    "allure-commandline": "^2.43.0",
+    "codeceptjs": "^4.1.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^17.4.2",
+    "playwright": "^1.62.1"
+  }
+}
